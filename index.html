@@ -1,46 +1,73 @@
+# Advanced Futuristic Portfolio Website
+
+## 📁 Structure
+
+```text
+portfolio/
+│
+├── index.html
+├── style.css
+└── script.js
+```
+
+---
+
+# 📄 index.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Adelino Portfolio</title>
 
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
 
   <canvas id="particles"></canvas>
 
+  <div class="gradient-orb orb1"></div>
+  <div class="gradient-orb orb2"></div>
+  <div class="gradient-orb orb3"></div>
+
   <header>
 
-    <h1>ADELINO</h1>
+    <div class="logo">
+      ADELINO
+    </div>
 
     <nav>
+      <a href="#home">Home</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
       <a href="#about">About</a>
     </nav>
 
   </header>
 
-  <section class="hero">
 
-    <div class="hero-content">
+  <!-- HERO -->
 
-      <p class="small-text">
-        PORTFOLIO
+  <section class="hero" id="home">
+
+    <div class="hero-left">
+
+      <p class="top-label">
+        FUTURISTIC DIGITAL PORTFOLIO
       </p>
 
-      <h2 id="typing"></h2>
+      <h1 id="typing"></h1>
 
       <p class="hero-description">
         Student • Programmer • Builder • Tech Lover
@@ -51,21 +78,94 @@
         <span>Python</span>
         <span>Godot</span>
         <span>HTML</span>
+        <span>Game Dev</span>
+        <span>Electronics</span>
       </div>
 
-      <a href="#projects" class="hero-button">
-        Explore Projects
-      </a>
+      <div class="hero-buttons">
+
+        <a href="#projects" class="primary-btn">
+          Explore Projects
+        </a>
+
+        <a href="#about" class="secondary-btn">
+          About Me
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-right">
+
+      <div class="hero-card big-card">
+
+        <div class="hero-card-top">
+          ACTIVE PROJECT
+        </div>
+
+        <h3>Voxel Experiments</h3>
+
+        <p>
+          Building procedural worlds, terrain systems, and futuristic game concepts.
+        </p>
+
+        <div class="mini-bars">
+
+          <div class="mini-bar">
+            <div class="mini-fill fill1"></div>
+          </div>
+
+          <div class="mini-bar">
+            <div class="mini-fill fill2"></div>
+          </div>
+
+          <div class="mini-bar">
+            <div class="mini-fill fill3"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <h2>4+</h2>
+          <p>Main Skills</p>
+        </div>
+
+        <div class="stat-card">
+          <h2>10+</h2>
+          <p>Projects</p>
+        </div>
+
+        <div class="stat-card">
+          <h2>∞</h2>
+          <p>Ideas</p>
+        </div>
+
+        <div class="stat-card">
+          <h2>2026</h2>
+          <p>Building</p>
+        </div>
+
+      </div>
 
     </div>
 
   </section>
 
-  <section id="projects" class="section">
 
-    <div class="section-top">
+  <!-- PROJECTS -->
 
-      <p class="section-small">
+  <section class="section" id="projects">
+
+    <div class="section-header">
+
+      <p class="section-label">
         PROJECTS
       </p>
 
@@ -73,49 +173,97 @@
         Featured Work
       </h2>
 
+      <p class="section-text">
+        A collection of games, experiments, and creative tech projects.
+      </p>
+
     </div>
 
-    <div class="cards">
 
-      <div class="card">
+    <div class="project-grid">
 
-        <div class="card-number">01</div>
+      <div class="project-card large">
 
-        <h3>Party Brawl</h3>
+        <div class="project-overlay"></div>
 
-        <p>
-          Multiplayer-inspired fighting game concept with action gameplay and chaotic mechanics.
-        </p>
+        <div class="project-content">
 
-        <a href = "https://adelinot2.itch.io/party-brawl"><button>View Game</button></a>
+          <div class="project-number">01</div>
 
-      </div>
+          <h3>Party Brawl</h3>
 
-      <div class="card">
+          <p>
+            Fast-paced party fighting game with chaotic gameplay and multiplayer-inspired mechanics.
+          </p>
 
-        <div class="card-number">02</div>
+          <button>
+            View Project
+          </button>
 
-        <h3>Scratch Projects</h3>
-
-        <p>
-          Finished Scratch projects and competition games built with creativity and polished mechanics.
-        </p>
-
-        <a href = "https://scratch.mit.edu/users/adelinot/"><button>Open Scratch</button></a>
+        </div>
 
       </div>
 
-      <div class="card">
 
-        <div class="card-number">03</div>
+      <div class="project-card">
 
-        <h3>Future Concepts</h3>
+        <div class="project-content">
 
-        <p>
-          FPS ideas, web projects, and experimental creative technology concepts.
-        </p>
+          <div class="project-number">02</div>
 
-        <button>Coming Soon</button>
+          <h3>Scratch Games</h3>
+
+          <p>
+            Finished projects, competition games, and polished Scratch experiments.
+          </p>
+
+          <button>
+            Open Scratch
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <div class="project-number">03</div>
+
+          <h3>Voxel Sandbox</h3>
+
+          <p>
+            Chunk generation, terrain systems, and sandbox mechanics experiments.
+          </p>
+
+          <button>
+            Explore
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="project-card">
+
+        <div class="project-content">
+
+          <div class="project-number">04</div>
+
+          <h3>FPS Concepts</h3>
+
+          <p>
+            Movement shooter prototypes inspired by modern arena games.
+          </p>
+
+          <button>
+            View Concept
+          </button>
+
+        </div>
 
       </div>
 
@@ -123,82 +271,210 @@
 
   </section>
 
-  <section id="skills" class="section">
 
-    <div class="section-top">
+  <!-- SKILLS -->
 
-      <p class="section-small">
+  <section class="section" id="skills">
+
+    <div class="section-header">
+
+      <p class="section-label">
         SKILLS
       </p>
 
       <h2>
-        Technologies
+        Technologies & Tools
       </h2>
 
     </div>
 
-    <div class="skills-grid">
 
-      <div class="skill-card">
-        Scratch
-      </div>
+    <div class="skills-layout">
 
-      <div class="skill-card">
-        Python
-      </div>
+      <div class="skill-box">
 
-      <div class="skill-card">
-        Godot
-      </div>
+        <div class="skill-top">
+          <span>Scratch</span>
+          <span>90%</span>
+        </div>
 
-      <div class="skill-card">
-        HTML & CSS
+        <div class="skill-bar">
+          <div class="skill-fill s1"></div>
+        </div>
+
       </div>
 
-      <div class="skill-card">
-        UI Design
+
+      <div class="skill-box">
+
+        <div class="skill-top">
+          <span>Python</span>
+          <span>70%</span>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-fill s2"></div>
+        </div>
+
       </div>
 
-      <div class="skill-card">
-        Electronics
+
+      <div class="skill-box">
+
+        <div class="skill-top">
+          <span>Godot</span>
+          <span>75%</span>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-fill s3"></div>
+        </div>
+
       </div>
-      <div class="skill-card">
-        Science
+
+
+      <div class="skill-box">
+
+        <div class="skill-top">
+          <span>HTML & CSS</span>
+          <span>80%</span>
+        </div>
+
+        <div class="skill-bar">
+          <div class="skill-fill s4"></div>
+        </div>
+
       </div>
+
     </div>
 
   </section>
 
-  <section id="about" class="section">
 
-    <div class="about-box">
+  <!-- JOURNEY -->
 
-      <p class="section-small">
-        ABOUT
+  <section class="section" id="journey">
+
+    <div class="section-header">
+
+      <p class="section-label">
+        JOURNEY
       </p>
 
       <h2>
-        Building Creative Technology
+        What I'm Exploring
       </h2>
 
-      <p class="about-text">
-        I enjoy building games, experimenting with technology, and creating futuristic digital experiences.
-        I love coding, electronics, creative systems, and turning ideas into real projects.
-      </p>
+    </div>
+
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <h3>Game Development</h3>
+
+          <p>
+            Experimenting with gameplay systems, mechanics, and game ideas.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <h3>Voxel Technology</h3>
+
+          <p>
+            Learning procedural generation and sandbox world systems.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+
+          <h3>Web Development</h3>
+
+          <p>
+            Building modern websites and futuristic user interfaces.
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
   </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="section" id="about">
+
+    <div class="about-layout">
+
+      <div class="about-left">
+
+        <p class="section-label">
+          ABOUT
+        </p>
+
+        <h2>
+          Building Creative Technology
+        </h2>
+
+      </div>
+
+
+      <div class="about-right">
+
+        <p>
+          I enjoy creating games, experimenting with futuristic technology, and building digital experiences.
+          My interests include programming, electronics, game systems, and creative problem solving.
+        </p>
+
+        <p>
+          I like turning ideas into interactive projects and continuously learning new technologies.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
 
   <footer>
 
     <p>
-      © 2026 Adelino
+      Designed & Built by Adelino
     </p>
 
   </footer>
+
 
   <script src="script.js"></script>
 
 </body>
 </html>
+```
+
+---
