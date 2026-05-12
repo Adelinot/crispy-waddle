@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Adelino Portfolio</title>
 
   <link rel="stylesheet" href="style.css"/>
@@ -10,74 +12,125 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-  <div class="background"></div>
+  <canvas id="particles"></canvas>
 
   <header>
+
     <h1>ADELINO</h1>
 
     <nav>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
     </nav>
+
   </header>
 
   <section class="hero">
 
-    <div class="hero-text">
-      <h2 id="typing"></h2>
+    <div class="hero-content">
 
-      <p>
-        I build games, websites, and creative tech projects.
+      <p class="small-text">
+        FUTURISTIC PORTFOLIO
       </p>
 
-      <a href="#projects" class="btn">
-        View Projects
+      <h2 id="typing"></h2>
+
+      <p class="hero-description">
+        Student • Programmer • Builder • Tech Lover
+      </p>
+
+      <div class="hero-tags">
+        <span>Scratch</span>
+        <span>Python</span>
+        <span>Godot</span>
+        <span>HTML</span>
+      </div>
+
+      <a href="#projects" class="hero-button">
+        Explore Projects
       </a>
+
     </div>
 
   </section>
 
   <section id="projects" class="section">
 
-    <h2 class="section-title">Projects</h2>
+    <div class="section-top">
+
+      <p class="section-small">
+        PROJECTS
+      </p>
+
+      <h2>
+        Featured Work
+      </h2>
+
+    </div>
 
     <div class="cards">
 
       <div class="card">
-        <h3>Voxel Sandbox</h3>
+
+        <div class="card-number">01</div>
+
+        <h3>Party Brawl</h3>
 
         <p>
-          Procedural voxel world with chunk generation.
+          Multiplayer-inspired fighting game concept with action gameplay and chaotic mechanics.
         </p>
+
+        <button>View Project</button>
+
       </div>
 
       <div class="card">
-        <h3>Zombie Survival</h3>
+
+        <div class="card-number">02</div>
+
+        <h3>Scratch Projects</h3>
 
         <p>
-          Survival shooter prototype with waves and upgrades.
+          Finished Scratch projects and competition games built with creativity and polished mechanics.
         </p>
+
+        <button>Open Scratch</button>
+
       </div>
 
       <div class="card">
-        <h3>Scratch Competition Game</h3>
+
+        <div class="card-number">03</div>
+
+        <h3>Voxel Experiments</h3>
 
         <p>
-          Fast-paced game made for a school competition.
+          Procedural terrain generation and sandbox system experiments using Godot.
         </p>
+
+        <button>Explore</button>
+
       </div>
 
       <div class="card">
-        <h3>LifeOS Dashboard</h3>
+
+        <div class="card-number">04</div>
+
+        <h3>Future Concepts</h3>
 
         <p>
-          Productivity dashboard with tasks and streaks.
+          FPS ideas, web projects, and experimental creative technology concepts.
         </p>
+
+        <button>Coming Soon</button>
+
       </div>
 
     </div>
@@ -86,54 +139,75 @@
 
   <section id="skills" class="section">
 
-    <h2 class="section-title">Skills</h2>
+    <div class="section-top">
 
-    <div class="skills">
+      <p class="section-small">
+        SKILLS
+      </p>
 
-      <div class="skill">
-        <span>HTML/CSS</span>
-        <div class="bar">
-          <div class="fill html"></div>
-        </div>
+      <h2>
+        Technologies
+      </h2>
+
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        Scratch
       </div>
 
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="bar">
-          <div class="fill js"></div>
-        </div>
+      <div class="skill-card">
+        Python
       </div>
 
-      <div class="skill">
-        <span>Godot</span>
-        <div class="bar">
-          <div class="fill godot"></div>
-        </div>
+      <div class="skill-card">
+        Godot
       </div>
 
-      <div class="skill">
-        <span>Python</span>
-        <div class="bar">
-          <div class="fill python"></div>
-        </div>
+      <div class="skill-card">
+        HTML & CSS
+      </div>
+
+      <div class="skill-card">
+        UI Design
+      </div>
+
+      <div class="skill-card">
+        Electronics
       </div>
 
     </div>
 
   </section>
 
-  <section id="contact" class="section">
+  <section id="about" class="section">
 
-    <h2 class="section-title">Contact</h2>
+    <div class="about-box">
 
-    <p class="contact-text">
-      Future indie developer 🚀
-    </p>
+      <p class="section-small">
+        ABOUT
+      </p>
+
+      <h2>
+        Building Creative Technology
+      </h2>
+
+      <p class="about-text">
+        I enjoy building games, experimenting with technology, and creating futuristic digital experiences.
+        I love coding, electronics, creative systems, and turning ideas into real projects.
+      </p>
+
+    </div>
 
   </section>
 
   <footer>
-    <p>© 2026 Adelino</p>
+
+    <p>
+      © 2026 Adelino
+    </p>
+
   </footer>
 
   <script src="script.js"></script>
