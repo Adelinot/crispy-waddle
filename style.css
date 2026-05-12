@@ -1,142 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adelino Portfolio</title>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  <link rel="stylesheet" href="style.css"/>
+html{
+  scroll-behavior:smooth;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
+.background{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:
+  radial-gradient(circle at top left,#1b2a6b,transparent 30%),
+  radial-gradient(circle at bottom right,#6b1bb3,transparent 30%);
+  z-index:-1;
+}
 
-  <div class="background"></div>
+header{
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.2);
+  z-index:100;
+}
 
-  <header>
-    <h1>ADELINO</h1>
+header h1{
+  font-family:'Orbitron',sans-serif;
+  font-size:28px;
+  color:#66d9ff;
+}
 
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+nav{
+  display:flex;
+  gap:25px;
+}
 
-  <section class="hero">
+nav a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
 
-    <div class="hero-text">
-      <h2 id="typing"></h2>
+nav a:hover{
+  color:#66d9ff;
+}
 
-      <p>
-        I build games, websites, and creative tech projects.
-      </p>
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 10%;
+}
 
-      <a href="#projects" class="btn">
-        View Projects
-      </a>
-    </div>
+.hero-text h2{
+  font-size:60px;
+  font-family:'Orbitron',sans-serif;
+  color:#66d9ff;
+  margin-bottom:20px;
+}
 
-  </section>
+.hero-text p{
+  font-size:20px;
+  opacity:0.8;
+  margin-bottom:30px;
+}
 
-  <section id="projects" class="section">
+.btn{
+  padding:15px 35px;
+  background:#66d9ff;
+  color:black;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:bold;
+  transition:0.3s;
+}
 
-    <h2 class="section-title">Projects</h2>
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 25px #66d9ff;
+}
 
-    <div class="cards">
+.section{
+  padding:120px 10%;
+}
 
-      <div class="card">
-        <h3>Voxel Sandbox</h3>
+.section-title{
+  text-align:center;
+  font-size:40px;
+  margin-bottom:60px;
+  font-family:'Orbitron',sans-serif;
+  color:#66d9ff;
+}
 
-        <p>
-          Procedural voxel world with chunk generation.
-        </p>
-      </div>
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
 
-      <div class="card">
-        <h3>Zombie Survival</h3>
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:20px;
+  transition:0.3s;
+  backdrop-filter:blur(10px);
+}
 
-        <p>
-          Survival shooter prototype with waves and upgrades.
-        </p>
-      </div>
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(102,217,255,0.3);
+}
 
-      <div class="card">
-        <h3>Scratch Competition Game</h3>
+.card h3{
+  margin-bottom:15px;
+  color:#66d9ff;
+}
 
-        <p>
-          Fast-paced game made for a school competition.
-        </p>
-      </div>
+.skills{
+  max-width:700px;
+  margin:auto;
+}
 
-      <div class="card">
-        <h3>LifeOS Dashboard</h3>
+.skill{
+  margin-bottom:30px;
+}
 
-        <p>
-          Productivity dashboard with tasks and streaks.
-        </p>
-      </div>
+.skill span{
+  display:block;
+  margin-bottom:10px;
+}
 
-    </div>
+.bar{
+  width:100%;
+  height:20px;
+  background:#1a1a1a;
+  border-radius:20px;
+  overflow:hidden;
+}
 
-  </section>
+.fill{
+  height:100%;
+  border-radius:20px;
+  background:#66d9ff;
+}
 
-  <section id="skills" class="section">
+.html{
+  width:85%;
+}
 
-    <h2 class="section-title">Skills</h2>
+.js{
+  width:70%;
+}
 
-    <div class="skills">
+.godot{
+  width:80%;
+}
 
-      <div class="skill">
-        <span>HTML/CSS</span>
-        <div class="bar">
-          <div class="fill html"></div>
-        </div>
-      </div>
+.python{
+  width:75%;
+}
 
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="bar">
-          <div class="fill js"></div>
-        </div>
-      </div>
+.contact-text{
+  text-align:center;
+  font-size:22px;
+  opacity:0.8;
+}
 
-      <div class="skill">
-        <span>Godot</span>
-        <div class="bar">
-          <div class="fill godot"></div>
-        </div>
-      </div>
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:0.5;
+}
 
-      <div class="skill">
-        <span>Python</span>
-        <div class="bar">
-          <div class="fill python"></div>
-        </div>
-      </div>
+@media(max-width:768px){
 
-    </div>
+  .hero-text h2{
+    font-size:40px;
+  }
 
-  </section>
+  nav{
+    gap:15px;
+    font-size:14px;
+  }
 
-  <section id="contact" class="section">
-
-    <h2 class="section-title">Contact</h2>
-
-    <p class="contact-text">
-      Future indie developer 🚀
-    </p>
-
-  </section>
-
-  <footer>
-    <p>© 2026 Adelino</p>
-  </footer>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
+}
