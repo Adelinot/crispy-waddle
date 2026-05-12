@@ -11,13 +11,12 @@ function typeText(){
   index++;
 
   if(index <= text.length){
-    setTimeout(typeText,80);
+    setTimeout(typeText,70);
   }
 
 }
 
 typeText();
-
 
 
 // PARTICLES
@@ -36,7 +35,7 @@ window.innerHeight;
 
 const particles = [];
 
-for(let i = 0; i < 90; i++){
+for(let i = 0; i < 120; i++){
 
   particles.push({
 
@@ -54,12 +53,7 @@ for(let i = 0; i < 90; i++){
 
 function animate(){
 
-  ctx.clearRect(
-    0,
-    0,
-    canvas.width,
-    canvas.height
-  );
+  ctx.clearRect(0,0,canvas.width,canvas.height);
 
   particles.forEach(p => {
 
@@ -97,7 +91,6 @@ function animate(){
 
 animate();
 
-
 window.addEventListener("resize",()=>{
 
   canvas.width =
@@ -107,3 +100,6 @@ window.addEventListener("resize",()=>{
   window.innerHeight;
 
 });
+
+
+on Cloudflare Pages.
